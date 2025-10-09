@@ -1,6 +1,8 @@
 [build]
+  base = "frontend"
   publish = "dist"
   command = "npm run build"
 
-[dev]
-  command = "npm run dev"
+[build.environment]
+  NODE_VERSION = "22"
+  VITE_API_BASE = "https://your-backend-domain.com"  # غيّرها إلى رابط API الحقيقي إذا توفر
