@@ -1,15 +1,21 @@
 [tool.poetry]
 name = "app"
 version = "0.1.0"
-description = ""
-authors = ["Devin AI <158243242+devin-ai-integration[bot]@users.noreply.github.com>"]
-readme = "README.md"
+description = "TwoCards backend"
+authors = ["you <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-fastapi = {extras = ["standard"], version = "^0.115.12"}
-psycopg = {extras = ["binary"], version = "^3.2.9"}
+fastapi = "^0.115.0"
+uvicorn = { extras = ["standard"], version = "^0.30.6" }
+sqlmodel = "^0.0.22"
+pydantic = "^2.9.0"
+pydantic-settings = "^2.4.0"
+python-jose = "^3.3.0"
+passlib = { extras = ["bcrypt"], version = "^1.7.4" }
 
+[tool.poetry.group.dev.dependencies]
+watchfiles = "^0.22.0"
 
 [build-system]
 requires = ["poetry-core"]
